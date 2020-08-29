@@ -1,9 +1,9 @@
 from rest_framework import serializers
-from endpoint.models import Model
+from endpoint.models import Senator
 
-class ModelSerializer(serializers.HyperlinkedModelSerializer):
+class SenatorSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
-        model = Model
+        model = Senator
         fields = [
             'id',
             'first_name',
