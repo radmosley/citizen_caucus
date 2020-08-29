@@ -1,29 +1,23 @@
 <template>
 <div class="main-nav">
     <nav>
-        <div class="branding">
-            <a href="#">
-            <h1>Citizen Caucus</h1>
-            </a>
-        </div>
-        <div class="search">
-            <input type="form">
-            <input type="button">
-        </div>
+        <branding></branding>
+        <search></search>
     </nav>
 </div>
 </template>
 
 <script>
-// import icon from '../2-components/icon.vue'
+import search from '../1-molecule/search.vue'
+import branding from '../1-molecule/branding.vue'
 
-
-// export default {
-//   name: 'App',
-//   components: {
-//     icon
-//   }
-// }
+export default {
+  name: 'Nav Bar',
+  components: {
+    search,
+    branding
+  }
+};
 </script>
 
 <style scoped>
@@ -41,5 +35,8 @@ h1 {
 nav {
     width: 80%;
     margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
 }
 </style>
